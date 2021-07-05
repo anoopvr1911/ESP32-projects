@@ -1,23 +1,23 @@
 #include <Arduino.h>
-int LEDs[]={18,15,2,5,16,4,19};
-#define Dig1 26
-#define Dig2 25
-#define Dig3 33
-#define Dig4 21
+
+#define Dig1 26 //12th pin Seven segment display
+#define Dig2 25 //9th pin Seven segment display
+#define Dig3 33 //8th pin Seven segment display
+#define Dig4 21 //6th pin Seven segment display
 #define DIGIT_ON LOW
 #define DIGIT_OFF HIGH
 #define DISPLAY_BRIGHTNESS 5000
 int i=0;
 boolean duiz = false;
 boolean hon = false;
-#define segA 15
-#define segB 2
-#define segC 5
-#define segD 16
-#define segE 4
-#define segF 19
-#define segG 18
-//int segPD = ;
+#define segA 15 //11th pin of Seven segment display
+#define segB 2  //7th pin of Seven segment display
+#define segC 5  //4th pin of Seven segment display
+#define segD 16 //2th pin of Seven segment display
+#define segE 4 //1th pin of Seven segment display
+#define segF 19 //10th pin of Seven segment display
+#define segG 18 //5th pin of Seven segment display
+
 void setup()
 {
  pinMode(segA, OUTPUT);
@@ -139,7 +139,7 @@ void lightNumber(int numberToDisplay) {
  }
 }
 void loop() {
-  // put your mainfor( int i = 0; i<=9999; i++){// for loop to pick a number from.
+
  duiz = false;
  hon = false;
  if(touchRead(32)<20)
